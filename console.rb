@@ -1,6 +1,8 @@
 require('pry')
 require_relative('./models/property')
 
+Property.delete_all
+
 property1 = Property.new({
   'address' => '112b Baker Street',
   'value' => '999999',
@@ -17,6 +19,10 @@ property1 = Property.new({
 
     property1.save
     property2.save
+
+
+    property1.no_of_bedrooms = '12'
+    property1.update()
 
     binding.pry
     nil
