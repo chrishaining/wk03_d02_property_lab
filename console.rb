@@ -19,6 +19,7 @@ property1 = Property.new({
 
     property1.save
     property2.save
+    binding.pry
 
     property1.no_of_bedrooms = '12'
     property1.update()
@@ -26,5 +27,5 @@ property1 = Property.new({
     Property.find(15)
     Property.find_by_address('29 Acacia Road')
 
-    binding.pry
-    nil
+    # binding.pry
+    # nil
